@@ -1,0 +1,141 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BACKGROUND */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: url("background.jpg") no-repeat center center/cover;
+}
+
+/* OVERLAY */
+.background-overlay {
+    background: rgba(0, 0, 0, 0.65);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #7fdfff;
+}
+
+/* CONTACT SECTION (CENTERED FULL PAGE) */
+.contact-section {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* TITLE */
+.contact-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+/* CARDS CONTAINER */
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* CARD STYLE */
+.card {
+    width: 250px;
+    padding: 25px;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0,191,255,0.12),
+        rgba(0,0,0,0.9)
+    );
+
+    box-shadow: 0 0 15px rgba(0,191,255,0.12);
+    transition: 0.3s ease;
+}
+
+/* HOVER */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,191,255,0.25);
+}
+
+/* CARD TEXT */
+.card h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgba(0,191,255,0.5);
+    padding-bottom: 5px;
+}
+
+.card a {
+    color: #7fdfff;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .navbar ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar li {
+        width: 100%;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .next-match,
+    .last-results {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+}

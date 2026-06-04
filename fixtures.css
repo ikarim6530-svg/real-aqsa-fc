@@ -1,0 +1,140 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BACKGROUND */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: url("background.jpg") no-repeat center center/cover;
+}
+
+/* OVERLAY */
+.background-overlay {
+    background: rgba(0, 0, 0, 0.65);
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #7fdfff;
+}
+
+/* PAGE TITLE */
+.page-title {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+}
+
+/* FILTER */
+.filter-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* SECTIONS */
+.fixtures-section,
+.results-section {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0,191,255,0.12),
+        rgba(0,0,0,0.9)
+    );
+
+    box-shadow: 0 0 15px rgba(0,191,255,0.12);
+}
+
+/* TITLES */
+h2 {
+    margin-bottom: 12px;
+    border-bottom: 2px solid rgba(0,191,255,0.5);
+    padding-bottom: 5px;
+}
+
+/* FIXTURE CARD */
+.fixture {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.05);
+    transition: 0.3s ease;
+}
+
+.fixture:hover {
+    transform: translateY(-4px);
+    background: rgba(0,191,255,0.12);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 80px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .navbar ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar li {
+        width: 100%;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .next-match,
+    .last-results {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+}

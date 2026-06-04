@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Interest - Real Aqsa FC</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+<div class="background-overlay">
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fixtures.html">Fixtures & Results</a></li>
+                <li><a href="table.html">Tables</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="register.html">Register Interest</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PAGE TITLE -->
+    <section class="page-title">
+        <h1>Register Your Interest</h1>
+        <p>Want to join Real Aqsa FC? Fill out the form below.</p>
+    </section>
+
+   <!-- FORM -->
+<section class="form-section">
+
+    <form
+        id="registerForm"
+        action="https://formspree.io/f/mredypow"
+        method="POST"
+    >
+
+        <div class="form-group">
+            <label>Full Name</label>
+
+            <input
+                type="text"
+                name="fullName"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Date of Birth</label>
+
+            <input
+                type="date"
+                name="dob"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+
+            <input
+                type="text"
+                name="Phone Number"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Preferred Position</label>
+
+            <select
+                name="position"
+                required
+            >
+                <option value="">Select Position</option>
+                <option>Goalkeeper</option>
+                <option>Fullback</option>
+                <option>Centre Back</option>
+                <option>Centre Midfielder</option>
+                <option>Winger</option>
+                <option>Forward</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Previous Football Experience</label>
+
+            <textarea
+                rows="5"
+                name="experience"
+                placeholder="Tell us about your experience..."
+            ></textarea>
+        </div>
+
+        <button type="submit">
+            Submit Application
+        </button>
+
+        <p id="successMessage"></p>
+
+    </form>
+
+</section>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Email: realaqsafc@yahoo.com</p>
+        <p>Instagram: @realaqsafc</p>
+    </footer>
+
+</div>
+<script src="register.js"></script>
+</body>
+</html>

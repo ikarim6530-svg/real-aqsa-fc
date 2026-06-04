@@ -1,0 +1,162 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BACKGROUND */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: url("background.jpg") no-repeat center center/cover;
+}
+
+/* OVERLAY */
+.background-overlay {
+    background: rgba(0, 0, 0, 0.65);
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #7fdfff;
+}
+
+/* PAGE TITLE */
+.page-title {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+}
+
+/* TABLE SECTION */
+.table-section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0,191,255,0.12),
+        rgba(0,0,0,0.9)
+    );
+
+    box-shadow: 0 0 15px rgba(0,191,255,0.12);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* HEADER */
+thead {
+    background: rgba(0,191,255,0.2);
+}
+
+th {
+    padding: 12px;
+    font-size: 14px;
+}
+
+/* ROWS */
+td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HOVER */
+tbody tr:hover {
+    background: rgba(0,191,255,0.1);
+}
+
+/* HIGHLIGHT YOUR TEAM */
+.highlight {
+    background: rgba(0,191,255,0.2);
+    font-weight: bold;
+}
+
+/* FORM STYLE */
+.form span {
+    display: inline-block;
+    margin: 0 3px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* RESULT COLORS */
+.win {
+    background: #28a745;
+}
+
+.draw {
+    background: #ffc107;
+    color: black;
+}
+
+.loss {
+    background: #dc3545;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 80px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .navbar ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar li {
+        width: 100%;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .next-match,
+    .last-results {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+}
