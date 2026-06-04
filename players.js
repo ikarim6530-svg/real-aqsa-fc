@@ -70,7 +70,7 @@ const players = [
     {
         name: "Reyad al Zain",
         position: "Midfielder",
-        image: "reyad aqsa.jpg",
+        image: "Reyad aqsa.jpg",
         apps: 0,
         goals: 0,
         assists: 0
