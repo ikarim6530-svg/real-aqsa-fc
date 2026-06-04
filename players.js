@@ -43,7 +43,7 @@ const players = [
     {
         name: "Kamraan Brooks",
         position: "Midfielder",
-        image: "Kam aqsa.jpg",
+        image: "kam aqsa.jpg",
         apps: 0,
         goals: 0,
         assists: 0
