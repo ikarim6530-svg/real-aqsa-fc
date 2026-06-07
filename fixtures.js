@@ -6,42 +6,22 @@ const matches = [
 
     // UPCOMING FIXTURES
     {
-        opponent: "Team A",
-        date: "2025-08-17",
-        displayDate: "Sunday 17 August - 10:30 AM",
-        venue: "Home",
+        opponent: "TBC",
+        date: "TBC",
+        displayDate: "TBC",
+        venue: "TBC",
         played: false
     },
 
     {
-        opponent: "Team B",
-        date: "2025-08-24",
-        displayDate: "Sunday 24 August - 10:30 AM",
-        venue: "Away",
+        opponent: "TBC",
+        date: "TBC",
+        displayDate: "TBC",
+        venue: "TBC",
         played: false
     },
-
-
 
     // PAST RESULTS
-    {
-        opponent: "Team C",
-        date: "2025-08-03",
-        displayDate: "Sunday 3 August",
-        venue: "Home",
-        played: true,
-        result: "2 - 1 Win"
-    },
-
-    {
-        opponent: "Team D",
-        date: "2025-07-27",
-        displayDate: "Sunday 27 July",
-        venue: "Away",
-        played: true,
-        result: "0 - 0 Draw"
-    }
-
 ];
 
 
@@ -64,25 +44,22 @@ const monthFilter =
 // ======================================
 // GET UNIQUE MONTHS
 // ======================================
+// ❗ CHANGED: Now using fixed full year instead of detecting from data
 
-const months = [];
-
-matches.forEach(match => {
-
-    const date = new Date(match.date);
-
-    const month =
-        date.toLocaleString("default", {
-            month: "long"
-        });
-
-    if (!months.includes(month)) {
-
-        months.push(month);
-
-    }
-
-});
+const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+];
 
 
 
@@ -109,10 +86,7 @@ function displayMatches(selectedMonth = "all") {
 
     // CLEAR HTML
     upcomingFixtures.innerHTML = "";
-
     pastResults.innerHTML = "";
-
-
 
     matches.forEach(match => {
 
@@ -139,7 +113,6 @@ function displayMatches(selectedMonth = "all") {
         if (!match.played) {
 
             upcomingFixtures.innerHTML +=
-
             `
             <div class="fixture">
 
@@ -163,13 +136,10 @@ function displayMatches(selectedMonth = "all") {
 
         }
 
-
-
         // PAST RESULTS
         else {
 
             pastResults.innerHTML +=
-
             `
             <div class="fixture">
 
@@ -209,9 +179,7 @@ function displayMatches(selectedMonth = "all") {
 // ======================================
 
 monthFilter.addEventListener("change", () => {
-
     displayMatches(monthFilter.value);
-
 });
 
 
