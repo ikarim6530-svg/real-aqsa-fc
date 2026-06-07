@@ -6,38 +6,38 @@ const leagueTable = [
 
     {
         team: "Real Aqsa FC",
-        played: 10,
-        wins: 7,
-        draws: 2,
-        losses: 1,
-        gf: 20,
-        ga: 10,
-        points: 23,
-        form: ["W", "W", "D"]
+        played: 0,
+        wins: 0,
+        draws: 0,
+        losses: 0,
+        gf: 0,
+        ga: 0,
+        points: 0,
+        form: []
     },
 
     {
-        team: "Team B",
-        played: 10,
-        wins: 6,
-        draws: 3,
-        losses: 1,
-        gf: 18,
-        ga: 9,
-        points: 21,
-        form: ["W", "L", "W"]
+        team: "TBC",
+        played: 0,
+        wins: 0,
+        draws: 0,
+        losses: 0,
+        gf: 0,
+        ga: 0,
+        points: 0,
+        form: []
     },
 
     {
-        team: "Team C",
-        played: 10,
-        wins: 5,
-        draws: 2,
-        losses: 3,
-        gf: 15,
-        ga: 12,
-        points: 17,
-        form: ["D", "W", "L"]
+        team: "TBC",
+        played: 0,
+        wins: 0,
+        draws: 0,
+        losses: 0,
+        gf: 0,
+        ga: 0,
+        points: 0,
+        form: []
     }
 
 ];
