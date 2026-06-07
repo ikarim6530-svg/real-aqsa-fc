@@ -1,191 +1,44 @@
-// ======================================
-// ALL MATCHES DATA
-// ======================================
+// ==============================
+// NEXT MATCH DATA
+// ==============================
 
-const matches = [
+const nextMatch = {
+    opponent: "TBC",
+    location: "TBC",
+    date: "TBC"
+};
 
-    // UPCOMING FIXTURES
-    {
-        opponent: "TBC",
-        date: "TBC",
-        displayDate: "TBC",
-        venue: "TBC",
-        played: false
-    },
 
-    {
-        opponent: "TBC",
-        date: "TBC",
-        displayDate: "TBC",
-        venue: "TBC",
-        played: false
-    },
+// ==============================
+// LAST RESULTS DATA
+// ==============================
 
-    // PAST RESULTS
+const results = [
+"No Competative Fixtures Yet"
+
 ];
 
 
+// ==============================
+// INSERT MATCH INFO INTO HTML
+// ==============================
 
-// ======================================
-// HTML CONTAINERS
-// ======================================
+document.getElementById("opponent").innerHTML =
+    `<strong>Opponent:</strong> ${nextMatch.opponent}`;
 
-const upcomingFixtures =
-    document.getElementById("upcomingFixtures");
+document.getElementById("location").innerHTML =
+    `<strong>Location:</strong> ${nextMatch.location}`;
 
-const pastResults =
-    document.getElementById("pastResults");
-
-const monthFilter =
-    document.getElementById("monthFilter");
-
-
-
-// ======================================
-// GET UNIQUE MONTHS
-// ======================================
-// ❗ CHANGED: Now using fixed full year instead of detecting from data
-
-const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-];
+document.getElementById("match-date").innerHTML =
+    `<strong>Date & Time:</strong> ${nextMatch.date}`;
 
 
 
-// ======================================
-// ADD MONTHS TO FILTER
-// ======================================
+// ==============================
+// SEASON MESSAGE
+// ==============================
 
-months.forEach(month => {
+const countdown = document.getElementById("countdown");
 
-    monthFilter.innerHTML +=
-        `<option value="${month}">
-            ${month}
-        </option>`;
-
-});
-
-
-
-// ======================================
-// DISPLAY MATCHES FUNCTION
-// ======================================
-
-function displayMatches(selectedMonth = "all") {
-
-    // CLEAR HTML
-    upcomingFixtures.innerHTML = "";
-    pastResults.innerHTML = "";
-
-    matches.forEach(match => {
-
-        const date = new Date(match.date);
-
-        const month =
-            date.toLocaleString("default", {
-                month: "long"
-            });
-
-
-
-        // FILTER CHECK
-        if (
-            selectedMonth !== "all" &&
-            month !== selectedMonth
-        ) {
-            return;
-        }
-
-
-
-        // UPCOMING FIXTURES
-        if (!match.played) {
-
-            upcomingFixtures.innerHTML +=
-            `
-            <div class="fixture">
-
-                <p>
-                    <strong>Opponent:</strong>
-                    ${match.opponent}
-                </p>
-
-                <p>
-                    <strong>Date:</strong>
-                    ${match.displayDate}
-                </p>
-
-                <p>
-                    <strong>Venue:</strong>
-                    ${match.venue}
-                </p>
-
-            </div>
-            `;
-
-        }
-
-        // PAST RESULTS
-        else {
-
-            pastResults.innerHTML +=
-            `
-            <div class="fixture">
-
-                <p>
-                    <strong>Opponent:</strong>
-                    ${match.opponent}
-                </p>
-
-                <p>
-                    <strong>Date:</strong>
-                    ${match.displayDate}
-                </p>
-
-                <p>
-                    <strong>Venue:</strong>
-                    ${match.venue}
-                </p>
-
-                <p>
-                    <strong>Result:</strong>
-                    ${match.result}
-                </p>
-
-            </div>
-            `;
-
-        }
-
-    });
-
-}
-
-
-
-// ======================================
-// FILTER EVENT LISTENER
-// ======================================
-
-monthFilter.addEventListener("change", () => {
-    displayMatches(monthFilter.value);
-});
-
-
-
-// ======================================
-// INITIAL DISPLAY
-// ======================================
-
-displayMatches();
+countdown.innerHTML =
+    "2026/27 Season Fixtures Coming Soon";
