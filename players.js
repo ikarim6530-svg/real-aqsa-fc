@@ -174,6 +174,14 @@ const players = [
         goals: 0,
         assists: 0
     },
+     {
+        name: "Muhammad Haadi",
+        position: "Defender",
+        image: "Haadi.jpeg",
+        apps: 0,
+        goals: 0,
+        assists: 0
+    },
 
     {
         name: "Haaziq Ul-Haq",
